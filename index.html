@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Task Board</title>
+</head>
+
+<body>
+    <div id="title"></div>
+    <div class="container">
+        <form id="add-task-form">
+
+            <label for="task"><b> What should I do?</b></label>
+            <textarea placeholder="My mission details" id="task" name="content" rows="10" cols="40"></textarea>
+            <div id="contentError"></div>
+
+            <label for="date"><b> What date should I do the task?</b></label>
+            <input type="date" placeholder="What date should I do the task?" name="date">
+            <div id="dateError"></div>
+
+            <label for="hour"><b>What time should I do the task?</b></label>
+            <input type="time" placeholder="What date should I do the task?" name="hour">
+
+            <div id="errors"></div>
+            <div id="buttons">
+                <button type="submit" onclick="focusMethod()" style="font-size:24px">submit</button>
+                <button type="reset" style="font-size:24px">reset</button>
+            </div>
+        </form>
+        <div id="TaskBoard"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+body {
+    /* font-family: 'Kalam', cursive, 'Varela Round', sans-serif; */
+    background-image: url('tile.jpg');
+    background-repeat: repeat;
+
+}
+
+.header {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.container {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#title {
+    width: 400px;
+    height: 50px;
+    margin: auto;
+    background: url('title.png') no-repeat;
+}
+
+  form{
+    flex: 1;
+    height: fit-content;
+    max-width: 400px;
+    background-color:grey;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    margin-right: 18px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 3px;
+}  
+
+ form>input {
+    width: 100%;
+    height: 30px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+ form>label {
+    width: 100%;
+    text-align: center;
+    padding: 13px 0px 2px;
+} 
+
+
+#task{
+    background-image: url('formbg.jpg');
+    position: relative;
+    width:300px ;
+    height: 160px;
+    font-size: 20px;
+} 
+
+
+ #buttons {
+    width: 100%;
+    text-align: center;
+} 
+
+button {
+    border-radius: 4px;
+    border-color: grey;
+}
+
+#dateError, #contentError {
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(80, 4, 74);
+}
+
+#TaskBoard {
+    flex: 6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.taskCard {
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    width: 18vw;
+    height: 18vw;
+    min-width: 240px;
+    min-height: 240px;
+    background-color: rgb(240, 226, 228);
+    border: rgb(194, 189, 189);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom-right-radius: 48px;
+}
+
+.taskCard>* {
+    padding: 10px;
+    flex-grow: 0.5;
+}
+
+.taskCard>p {
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+}
+
+.taskHeader {
+    background-color: rgb(202, 189, 189);
+    padding: 15px;
+    position: relative;
+}
+.taskDetails {
+    font-size: smaller;
+}
+
+.taskDetails:hover {
+    font-weight: bold;
+}
+
+.taskParagraph {
+    flex-grow: 20;
+    overflow-x: auto;
+    width: 200px;
+    height: 97px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*scrollbar*/
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(100, 96, 96);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #292828;
+}
+
+.delete-btn {
+    visibility: hidden;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.delete-btn:hover {
+    color: rgb(231, 14, 14);
+}
+
+.delete-btn.show {
+    visibility: visible;
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bolder;
+}
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.delete {
+    text-decoration: line-through;
+}
+.taskTools>* {
+    background-color: transparent;
+    border: none;
+}
+
+.taskTools>*.clicked {
+    background-color: lightslategray;
+    border: none;
+}
+.taskTools>*:hover {
+    background-color: rgb(152, 171, 197);
+}
+
+@media screen and (max-width:735px) {
+    form {
+        position: initial;
+    }
+    .taskCard {
+        width: 12vw;
+        height: 12vw;
+        min-width: 120px;
+        min-height: 180px;
+    }
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
